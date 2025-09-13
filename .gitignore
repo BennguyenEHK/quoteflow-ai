@@ -7,7 +7,6 @@ yarn-error.log*
 # Windows
 Thumbs.db
 Desktop.ini
-nul
 
 # IDE
 .vscode/
