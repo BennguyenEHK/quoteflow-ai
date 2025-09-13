@@ -1,0 +1,426 @@
+/* FORMULA INPUT PANEL STYLES - PER-ITEM PRICING VARIABLES */
+
+/* Global Currency Section Styles */
+.global-currency-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.global-currency-section h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Search Bar Styles */
+.item-search-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.item-search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: #6b7280;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fafafa;
+    color: #374151;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #3b82f6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.search-results-info {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+}
+
+.search-results-info.highlighted {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Search highlighting styles */
+.search-highlight {
+    background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+    color: #92400e;
+    font-weight: 600;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+/* Items filtering styles */
+.item-variables-group.search-hidden {
+    display: none;
+}
+
+.item-variables-group.search-visible {
+    display: block;
+    animation: searchFadeIn 0.3s ease-in-out;
+}
+
+@keyframes searchFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search bar hide/show animation */
+.item-search-section.search-bar-hidden {
+    display: none;
+}
+
+.item-search-section.search-bar-visible {
+    display: block;
+    animation: searchBarSlideIn 0.4s ease-out;
+}
+
+@keyframes searchBarSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 100px;
+    }
+}
+
+.formula-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: #fafafa;
+}
+
+/* Warning Box Styles */
+.pricing-warning-box {
+    background: #fef3cd;
+    border: 1px solid #fbbf24;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.warning-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.warning-text {
+    font-size: 13px;
+    color: #92400e;
+    line-height: 1.4;
+}
+
+.formula-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.formula-display {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.formula-text {
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    font-size: 12px;
+    color: #1f2937;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.variables-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.variables-section h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* No items message */
+.no-items-message {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Per-item variables group */
+.item-variables-group {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.item-variables-group:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item-header h5 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0;
+}
+
+.currency-badge {
+    background: #3b82f6;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Variables grid layout */
+.variables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.variable-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.variable-input label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.variable-input input {
+    padding: 6px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.variable-input input:focus {
+    border-color: #3b82f6;
+}
+
+.variable-input small {
+    font-size: 9px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* Profit calculation table */
+.calculation-preview {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.calculation-preview h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.profit-table-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.profit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.profit-table th {
+    background: #f8fafc;
+    color: #374151;
+    font-weight: 600;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+}
+
+.profit-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.profit-table .item-desc {
+    color: #374151;
+    font-weight: 500;
+}
+
+.profit-table .qty {
+    text-align: center;
+    color: #6b7280;
+}
+
+.profit-table .profit {
+    text-align: right;
+    color: #059669;
+    font-weight: 600;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+}
+
+.profit-table .no-data {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Legacy support for old variable-group structure */
+.variable-group {
+    margin-bottom: 12px;
+}
+
+.variable-group:last-child {
+    margin-bottom: 0;
+}
+
+.variable-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.variable-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.variable-group input:focus {
+    border-color: #3b82f6;
+}
+
+.variable-group small {
+    display: block;
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* Scrollbar styles */
+.formula-container::-webkit-scrollbar,
+.variables-section::-webkit-scrollbar,
+.profit-table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.formula-container::-webkit-scrollbar-track,
+.variables-section::-webkit-scrollbar-track,
+.profit-table-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.formula-container::-webkit-scrollbar-thumb,
+.variables-section::-webkit-scrollbar-thumb,
+.profit-table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.formula-container::-webkit-scrollbar-thumb:hover,
+.variables-section::-webkit-scrollbar-thumb:hover,
+.profit-table-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

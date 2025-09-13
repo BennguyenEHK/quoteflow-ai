@@ -1,0 +1,53 @@
+{
+  "environments": {
+    "localhost": {
+      "SSE_URL": "http://localhost:5000/events",
+      "API_BASE": "http://localhost:5000",
+      "WEBHOOK_URL": "https://hook.eu2.make.com/diqqb34gtjqmrh4mke8tgta9zvgn2cip",
+      "RETRY_INTERVAL": 1000,
+      "AUTO_DETECT_HOST": true,
+      "description": "Direct localhost development - fastest connection"
+    },
+    "development": {
+      "SSE_URL": "https://1b4a5a4151de.ngrok-free.app/events",
+      "API_BASE": "https://1b4a5a4151de.ngrok-free.app",
+      "WEBHOOK_URL": "https://hook.eu2.make.com/diqqb34gtjqmrh4mke8tgta9zvgn2cip",
+      "RETRY_INTERVAL": 2000,
+      "AUTO_DETECT_HOST": false,
+      "description": "Development with ngrok - external access enabled"
+    },
+    "ngrok-development": {
+      "SSE_URL": "https://d064c8e543d8.ngrok-free.app/events",
+      "API_BASE": "https://d064c8e543d8.ngrok-free.app",
+      "WEBHOOK_URL": "https://hook.eu2.make.com/diqqb34gtjqmrh4mke8tgta9zvgn2cip",
+      "RETRY_INTERVAL": 5000,
+      "AUTO_DETECT_HOST": false,
+      "description": "Development with ngrok for external access (slower but external)"
+    },
+    "production": {
+      "SSE_URL": "https://your-domain.com/events",
+      "API_BASE": "https://your-domain.com",
+      "WEBHOOK_URL": "https://hook.eu2.make.com/diqqb34gtjqmrh4mke8tgta9zvgn2cip",
+      "RETRY_INTERVAL": 3000,
+      "AUTO_DETECT_HOST": false,
+      "description": "Production deployment on cloud"
+    }
+  },
+  "current_environment": "development",
+  "fallback_urls": {
+    "SSE_FALLBACKS": [
+      "http://localhost:5000/events",
+      "http://127.0.0.1:5000/events"
+    ],
+    "API_FALLBACKS": [
+      "http://localhost:5000",
+      "http://127.0.0.1:5000"
+    ]
+  },
+  "connection_settings": {
+    "ENABLE_SMART_FALLBACK": true,
+    "MAX_RETRY_ATTEMPTS": 3,
+    "FALLBACK_DELAY": 1000,
+    "CONNECTION_TIMEOUT": 5000
+  }
+}

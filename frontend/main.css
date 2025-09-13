@@ -1,0 +1,274 @@
+/* ============================================
+   🎨 AI QUOTATION AGENT - MAIN STYLES
+   ============================================ */
+
+/* Import panel-specific styles */
+@import url('./styles/chat-input.css');
+@import url('./styles/result-preview.css');
+@import url('./styles/workflow-tracker.css');
+@import url('./styles/file-manager.css');
+@import url('./styles/formula-input.css');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Zoom Control Styles */
+.zoom-toggle-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    margin-right: 4px;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+.zoom-toggle-btn:hover {
+    background: #5a6268;
+    transform: scale(1.05);
+}
+
+.zoom-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+.zoom-toggle-btn.zoomed-out {
+    background: #28a745;
+    color: white;
+}
+
+.zoom-toggle-btn.zoomed-out::before {
+    content: "↗ ";
+}
+
+.zoom-toggle-btn.zoomed-out::after {
+    content: " In";
+}
+
+.zoom-toggle-btn:not(.zoomed-out)::before {
+    content: "↙ ";
+}
+
+.zoom-toggle-btn:not(.zoomed-out)::after {
+    content: " Out";
+}
+
+/* Panel zoom states */
+.panel-zoomed-out {
+    position: fixed;
+    top: 70px; /* Below header */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    z-index: 1000;
+    background: white;
+    transform: scale(1.0);
+    transform-origin: top left;
+    transition: all 0.4s ease-in-out;  /* Slower for zoom out */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.panel-zoomed-in {
+    position: relative;
+    transform: scale(1.0);
+    transform-origin: top left;
+    transition: all 0.25s ease-in-out;  /* Faster for zoom in */
+    width: 100%;
+    z-index: auto;
+    box-shadow: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    background: rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+.status-dot.connected { background: #10b981; }
+.status-dot.connecting { background: #f59e0b; animation: pulse 1s infinite; }
+.status-dot.disconnected { background: #ef4444; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Main Grid Layout */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    padding: 12px;
+    height: calc(100vh - 70px);
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Panel Grid Positioning */
+.chat-input-panel { grid-row: 1; grid-column: 1; }
+.result-preview-panel { grid-row: 1 / 3; grid-column: 2; }
+.workflow-tracker-panel { grid-row: 2; grid-column: 1; }
+.file-manager-panel { grid-row: 1; grid-column: 3; }
+.formula-input-panel { grid-row: 2; grid-column: 3; }
+
+/* Shared Panel Styles */
+.chat-input-panel,
+.result-preview-panel,
+.workflow-tracker-panel,
+.file-manager-panel,
+.formula-input-panel {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.panel-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Shared Component Styles */
+.action-btn, .clear-btn {
+    background: none;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.action-btn:hover, .clear-btn:hover {
+    background: #f3f4f6;
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.action-btn:disabled, .clear-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Notifications */
+#notificationContainer {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background: #1f2937;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 13px;
+    max-width: 300px;
+}
+
+.notification.show { transform: translateX(0); }
+.notification.success { background: #10b981; }
+.notification.error { background: #ef4444; }
+.notification.info { background: #3b82f6; }
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .main-container {
+        grid-template-columns: 1fr 1.2fr 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .chat-input-panel { grid-row: 1; grid-column: 1; }
+    .result-preview-panel { grid-row: 1 / 3; grid-column: 2; }
+    .workflow-tracker-panel { grid-row: 2; grid-column: 1; }
+    .file-manager-panel { grid-row: 3; grid-column: 1; }
+    .formula-input-panel { grid-row: 3; grid-column: 2; }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        height: auto;
+        min-height: calc(100vh - 70px);
+    }
+    .chat-input-panel { grid-row: 1; grid-column: 1; }
+    .result-preview-panel { grid-row: 2; grid-column: 1; }
+    .workflow-tracker-panel { grid-row: 3; grid-column: 1; }
+    .file-manager-panel { grid-row: 4; grid-column: 1; }
+    .formula-input-panel { grid-row: 5; grid-column: 1; }
+    .header h1 { font-size: 16px; }
+    .panel-header { padding: 12px 15px; }
+    .panel-header h2 { font-size: 14px; }
+}

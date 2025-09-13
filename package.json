@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.88",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "node-fetch": "^2.6.7"
+  },
+  "scripts": {
+    "start": "node sse_server.js",
+    "start-named": "node scripts/manage-sessions.js start",
+    "sessions": "node scripts/manage-sessions.js list",
+    "session-status": "node scripts/manage-sessions.js status",
+    "stop-session": "node scripts/manage-sessions.js stop",
+    "cleanup": "node scripts/manage-sessions.js cleanup",
+    "kill-all": "node scripts/manage-sessions.js kill-all",
+    "ngrok": "node ngrok_server.js",
+    "config": "node scripts/show-config.js",
+    "port-check": "node scripts/port-cleanup.js check",
+    "port-kill": "node scripts/port-cleanup.js kill",
+    "port-kill-all": "node scripts/port-cleanup.js kill-all"
+  }
+}

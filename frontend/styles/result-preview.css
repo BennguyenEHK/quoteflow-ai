@@ -1,0 +1,118 @@
+/* RESULT PREVIEW PANEL STYLES */
+
+.preview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fafafa;
+    min-height: 0;
+}
+
+.empty-preview {
+    padding: 60px 20px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.preview-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: visible;
+}
+
+.preview-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.quotation-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.quotation-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quotation-ref {
+    font-weight: 700;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.quotation-date {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.customer-section,
+.items-section,
+.totals-section {
+    margin-bottom: 20px;
+}
+
+.customer-section h4,
+.items-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.customer-info div {
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.preview-table th,
+.preview-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid #e5e7eb;
+}
+
+.preview-table th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+}
+
+.preview-table td:last-child,
+.preview-table th:last-child {
+    text-align: right;
+}
+
+.total-amount {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    padding: 15px;
+    background: #f3f4f6;
+    border-radius: 8px;
+}
+
+.no-items {
+    padding: 30px;
+    text-align: center;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* Scrollbar styling removed - using single iframe scrollbar */

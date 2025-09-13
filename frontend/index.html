@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quotation Agent - 5-Panel Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>🤖 AI Quotation Agent Dashboard</h1>
+        <div class="connection-status">
+            <div class="status-dot" id="statusDot"></div>
+            <span id="connectionStatus">Ready</span>
+        </div>
+    </div>
+
+    <!-- Main 5-Panel Container -->
+    <div class="main-container">
+        
+        <!-- Panel 1: Master-Agent Chatbox -->
+        <div class="chat-input-panel">
+            <div class="panel-header">
+                <h2>💬 Master-Agent Chat</h2>
+                <div class="panel-controls">
+                    <button class="zoom-toggle-btn" id="chatZoomToggle" title="Toggle panel size">⤡ Zoom</button>
+                    <button class="clear-btn" id="clearBtn">Clear Chat</button>
+                </div>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <div class="agent-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                Loading...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <div class="input-area">
+                        <textarea 
+                            id="chatInput" 
+                            placeholder="Type your message to the agent..."
+                            rows="2"></textarea>
+                        
+                        <div class="input-actions">
+                            <button class="send-btn" id="sendBtn">
+                                ➤ Send
+                            </button>
+                            <div class="file-upload">
+                                <input type="file" id="chatFileInput" accept=".txt,.pdf,.doc,.docx" hidden>
+                                <button class="upload-btn" id="uploadBtn">
+                                    📎 Attach
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-status" id="chatStatus">
+                        Ready to chat
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 2: Result Preview (Live Quotation Preview) -->
+        <div class="result-preview-panel">
+            <div class="panel-header">
+                <h2>📋 Quotation Preview</h2>
+                <div class="preview-actions">
+                    <button class="zoom-toggle-btn" id="previewZoomToggle" title="Toggle panel size">⤡ Zoom</button>
+                    <button class="action-btn" id="editBtn" disabled>✏️ Edit</button>
+                    <button class="action-btn" id="downloadBtn" disabled>⬇️ Download</button>
+                </div>
+            </div>
+            
+            <div class="preview-container" id="previewContainer">
+                <div class="empty-preview" id="emptyPreview">
+                    📝 Generated quotation will appear here for review
+                </div>
+                
+                <!-- Live Preview Content -->
+                <div class="preview-content" id="previewContent" style="display: none;">
+                    <!-- Warning Box -->
+                    <div class="pricing-warning-box" id="pricingWarningBox">
+                        <div class="warning-icon">⚠️</div>
+                        <div class="warning-text">
+                            The unit_price and ext_price are currently empty. Please enter all the formula variables to perform the calculation.
+                        </div>
+                    </div>
+                    
+                    <div class="quotation-header">
+                        <div class="quotation-meta">
+                            <span class="quotation-ref" id="quotationRef">REF-001</span>
+                            <span class="quotation-date" id="quotationDate"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="customer-section">
+                        <h4>Customer Information</h4>
+                        <div class="customer-info" id="customerInfo">
+                            <!-- Customer details populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="items-section">
+                        <h4>Quotation Items</h4>
+                        <div class="items-table" id="itemsTable">
+                            <!-- Items table populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="totals-section">
+                        <div class="total-amount" id="totalAmount">
+                            Total: <span id="totalValue">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 3: Workflow Tracker (Real-time Process Monitor) -->
+        <div class="workflow-tracker-panel">
+            <div class="panel-header">
+                <h2>⚙️ Workflow Progress</h2>
+                <div class="workflow-stats">
+                    <button class="zoom-toggle-btn" id="workflowZoomToggle" title="Toggle panel size">⤡ Zoom</button>
+                    <span id="activeWorkflows">0 Active</span>
+                    <span id="completedToday">0 Completed</span>
+                </div>
+            </div>
+            
+            <div class="workflow-container" id="workflowContainer">
+                <div class="workflow-empty" id="workflowEmpty">
+                    ⏳ No active workflows
+                </div>
+                
+                <!-- Active Workflows List -->
+                <div class="active-workflows" id="activeWorkflowsList">
+                    <!-- Dynamic workflows populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 4: File Manager (File Operations) -->
+        <div class="file-manager-panel">
+            <div class="panel-header">
+                <h2>📁 File Manager</h2>
+                <div class="file-actions">
+                    <button class="zoom-toggle-btn" id="fileZoomToggle" title="Toggle panel size">⤡ Zoom</button>
+                    <button class="action-btn" id="refreshFilesBtn">🔄 Refresh</button>
+                </div>
+            </div>
+            
+            <div class="file-container" id="fileContainer">
+                <!-- Logo Upload Section -->
+                <div class="upload-section">
+                    <h4>🏢 Company Logo</h4>
+                    <div class="upload-zone logo-upload" id="logoUploadZone">
+                        <div class="upload-icon">🖼️</div>
+                        <div class="upload-text">
+                            Drop logo here or click
+                            <br><small>JPG, PNG, SVG</small>
+                        </div>
+                        <input type="file" id="logoUpload" accept=".png,.jpg,.jpeg,.svg" hidden>
+                    </div>
+                    <div class="asset-files" id="logoFilesList">
+                        <div class="no-files">No logo uploaded</div>
+                    </div>
+                </div>
+
+                <!-- Signature Upload Section -->
+                <div class="upload-section">
+                    <h4>✍️ Digital Signature</h4>
+                    <div class="upload-zone signature-upload" id="signatureUploadZone">
+                        <div class="upload-icon">📝</div>
+                        <div class="upload-text">
+                            Drop signature here or click
+                            <br><small>JPG, PNG, SVG</small>
+                        </div>
+                        <input type="file" id="signatureUpload" accept=".png,.jpg,.jpeg,.svg" hidden>
+                    </div>
+                    <div class="asset-files" id="signatureFilesList">
+                        <div class="no-files">No signature uploaded</div>
+                    </div>
+                </div>
+
+                <!-- Template Upload Section -->
+                <div class="upload-section">
+                    <h4>📄 Quotation Template</h4>
+                    <div class="upload-zone template-upload" id="templateUploadZone">
+                        <div class="upload-icon">📋</div>
+                        <div class="upload-text">
+                            Drop template here or click
+                            <br><small>HTML templates</small>
+                        </div>
+                        <input type="file" id="templateUpload" accept=".html" hidden>
+                    </div>
+                    <div class="asset-files" id="templateFilesList">
+                        <div class="no-files">Using default template</div>
+                    </div>
+                </div>
+                
+                <div class="files-section">
+                    <h4>📁 Generated Files</h4>
+                    <div class="generated-files" id="generatedFilesList">
+                        <div class="no-files">No files generated yet</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 5: Formula Input (Variable Configuration) -->
+        <div class="formula-input-panel">
+            <div class="panel-header">
+                <h2>🧮 Pricing Variables</h2>
+                <div class="formula-actions">
+                    <button class="zoom-toggle-btn" id="formulaZoomToggle" title="Toggle panel size">⤡ Zoom</button>
+                    <button class="action-btn" id="resetBtn">🔄 Reset</button>
+                    <button class="action-btn" id="applyBtn">✓ Apply</button>
+                </div>
+            </div>
+            
+            <div class="formula-container" id="formulaContainer">
+                <div class="formula-display">
+                    <div class="formula-text">
+                        sales_unit_price = ((unit_price + shipping_cost) × tax_rate × exchange_rate × profit_rate) - discount
+                    </div>
+                </div>
+                
+                <div class="variables-section">
+                    <h4>Per-Item Pricing Variables</h4>
+                    <div id="itemVariablesContainer">
+                        <div class="no-items-message">Load quotation data to configure per-item variables</div>
+                    </div>
+                </div>
+                
+                <div class="calculation-preview">
+                    <h4>Potential_profit_in_VND</h4>
+                    
+                    <div class="profit-table-container" id="profitTableContainer">
+                        <table class="profit-table" id="profitTable">
+                            <thead>
+                                <tr>
+                                    <th>Items</th>
+                                    <th>Qty</th>
+                                    <th>Potential Profit</th>
+                                </tr>
+                            </thead>
+                            <tbody id="profitTableBody">
+                                <tr>
+                                    <td colspan="3" class="no-data">No quotation data available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+
+    <!-- Load JavaScript -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
