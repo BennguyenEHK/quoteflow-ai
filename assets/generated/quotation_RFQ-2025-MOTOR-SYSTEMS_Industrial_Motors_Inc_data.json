@@ -1,0 +1,229 @@
+{
+  "base_filename": "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc",
+  "saved_at": "2025-09-13T15:05:18.618Z",
+  "session_info": {
+    "id": "memory_1757775915916",
+    "action": "update",
+    "status": "processing"
+  },
+  "quotation_data": {
+    "quotation_items": [
+      {
+        "item_no": "1",
+        "currency_code": "USD",
+        "company_requirement": {
+          "description": "High Efficiency Motor 10HP",
+          "model_part_number": "HEM-10HP-PRO",
+          "maker_origin": "ABB",
+          "qty": 3,
+          "uom": "EA",
+          "specifications": "10HP, 3-phase, 380V, IE3 efficiency"
+        },
+        "compliance_deviation": "Fully compliant",
+        "bidder_proposal": {
+          "original_unit_price": 850,
+          "unit_price": 850,
+          "delivery_time": "4 weeks",
+          "currency_code": "USD",
+          "unit_price_vnd": 850,
+          "original_unit_price_vnd": 850,
+          "calculated_unit_price_vnd": 37983330,
+          "calculated_ext_price_vnd": 113949000,
+          "calculated_unit_price": 37983330,
+          "calculated_ext_price": 113949000,
+          "calculation_metadata": {
+            "actual_unit_price": 25839000,
+            "profit_unit_price": 38758500,
+            "sales_unit_price": 37983330,
+            "discount_amount": 775170,
+            "calculation_timestamp": "2025-09-13T15:04:58.828Z"
+          }
+        },
+        "calculated_results": {
+          "potential_profit": 38758500,
+          "actual_unit_price": 25839000,
+          "profit_unit_price": 38758500,
+          "sales_unit_price": 37983330,
+          "ext_price": 113949000,
+          "calculation_timestamp": "2025-09-13T15:05:16.038Z"
+        }
+      },
+      {
+        "item_no": "2",
+        "currency_code": "USD",
+        "company_requirement": {
+          "description": "Variable Frequency Drive",
+          "model_part_number": "VFD-10HP-001",
+          "maker_origin": "ABB",
+          "qty": 3,
+          "uom": "EA",
+          "specifications": "10HP capacity, 380V input"
+        },
+        "compliance_deviation": "Standard product",
+        "bidder_proposal": {
+          "original_unit_price": 450,
+          "unit_price": 450,
+          "delivery_time": "4 weeks",
+          "currency_code": "USD",
+          "unit_price_vnd": 450,
+          "original_unit_price_vnd": 450,
+          "calculated_unit_price_vnd": 20519730,
+          "calculated_ext_price_vnd": 61560000,
+          "calculated_unit_price": 20519730,
+          "calculated_ext_price": 61560000,
+          "calculation_metadata": {
+            "actual_unit_price": 13959000,
+            "profit_unit_price": 20938500,
+            "sales_unit_price": 20519730,
+            "discount_amount": 418770,
+            "calculation_timestamp": "2025-09-13T15:04:58.828Z"
+          }
+        },
+        "calculated_results": {
+          "potential_profit": 20493000,
+          "actual_unit_price": 13662000,
+          "profit_unit_price": 20493000,
+          "sales_unit_price": 20083140,
+          "ext_price": 60249000,
+          "calculation_timestamp": "2025-09-13T15:05:16.039Z"
+        }
+      }
+    ],
+    "rfq_reference": "RFQ-2025-MOTOR-SYSTEMS",
+    "customer_info": {
+      "company_name": "Industrial Motors Inc",
+      "contact_person": "Sarah Johnson",
+      "email": "sarah.johnson@industrialmotors.com",
+      "address": "456 Industrial Ave, Ho Chi Minh City, Vietnam"
+    }
+  },
+  "calculated_pricing": {
+    "calculation_success": true,
+    "total_items": 2,
+    "processed_items": [
+      {
+        "item_no": "1",
+        "description": "High Efficiency Motor 10HP",
+        "original_unit_price": 850,
+        "quantity": 3,
+        "unit_of_measure": "EA",
+        "actual_unit_price": 25839000,
+        "profit_unit_price": 38758500,
+        "sales_unit_price": 37983330,
+        "ext_price": 113949000,
+        "potential_profit": 38758500,
+        "shipping_cost_applied": 20,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 27000,
+        "profit_rate_applied": 1.5,
+        "discount_rate_applied": 0.02,
+        "discount_amount": 775170,
+        "calculation_steps": {
+          "step_1_with_shipping": 870,
+          "step_2_with_tax": 957.0000000000001,
+          "step_3_actual_unit_price": 25839000,
+          "step_4_profit_unit_price": 38758500,
+          "step_5_discount_amount": 775170,
+          "step_6_sales_unit_price": 37983330
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-09-13T15:05:16.038Z"
+      },
+      {
+        "item_no": "2",
+        "description": "Variable Frequency Drive",
+        "original_unit_price": 450,
+        "quantity": 3,
+        "unit_of_measure": "EA",
+        "actual_unit_price": 13662000,
+        "profit_unit_price": 20493000,
+        "sales_unit_price": 20083140,
+        "ext_price": 60249000,
+        "potential_profit": 20493000,
+        "shipping_cost_applied": 10,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 27000,
+        "profit_rate_applied": 1.5,
+        "discount_rate_applied": 0.02,
+        "discount_amount": 409860,
+        "calculation_steps": {
+          "step_1_with_shipping": 460,
+          "step_2_with_tax": 506.00000000000006,
+          "step_3_actual_unit_price": 13662000,
+          "step_4_profit_unit_price": 20493000,
+          "step_5_discount_amount": 409860,
+          "step_6_sales_unit_price": 20083140
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-09-13T15:05:16.039Z"
+      }
+    ],
+    "pricing_summary": {
+      "subtotal": 174198000,
+      "currency": "VND",
+      "formatted_subtotal": "174.198.000 ₫"
+    },
+    "calculation_metadata": {
+      "formula_used": "sales_unit_price = ((unit_price + shipping_cost) × tax_rate × exchange_rate × profit_rate) - discount",
+      "variables_applied": {
+        "1": {
+          "shipping_cost": 20,
+          "tax_rate": 1.1,
+          "exchange_rate": 27000,
+          "profit_rate": 1.5,
+          "discount_rate": 0.02
+        },
+        "2": {
+          "shipping_cost": 10,
+          "tax_rate": 1.1,
+          "exchange_rate": 27000,
+          "profit_rate": 1.5,
+          "discount_rate": 0.02
+        }
+      },
+      "timestamp": "2025-09-13T15:05:16.038Z"
+    },
+    "errors": []
+  },
+  "metadata": {
+    "rfq_reference": "RFQ-2025-MOTOR-SYSTEMS",
+    "customer_name": "Industrial Motors Inc",
+    "items_count": 2,
+    "has_pricing": true
+  },
+  "pricing_variables": {
+    "format_version": "2.0",
+    "storage_timestamp": "2025-09-13T15:05:18.618Z",
+    "per_item": {
+      "1": {
+        "shipping_cost": 20,
+        "tax_rate": 1.1,
+        "exchange_rate": 27000,
+        "profit_rate": 1.5,
+        "discount_rate": 0.02
+      },
+      "2": {
+        "shipping_cost": 10,
+        "tax_rate": 1.1,
+        "exchange_rate": 27000,
+        "profit_rate": 1.5,
+        "discount_rate": 0.02
+      }
+    },
+    "global_fallback": {
+      "shipping_cost": 20,
+      "tax_rate": 1.1,
+      "exchange_rate": 27000,
+      "profit_rate": 1.5,
+      "discount_rate": 0.02
+    },
+    "original_format": "per-item"
+  },
+  "update_history": [
+    {
+      "timestamp": "2025-09-13T15:05:18.618Z",
+      "action": "pricing_variables_updated",
+      "source": "apply_button"
+    }
+  ]
+}

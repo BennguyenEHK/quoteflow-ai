@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation - {{rfq_reference}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { text-align: center; margin-bottom: 30px; position: relative; }
+        .company-logo { position: absolute; left: 0; top: 0; }
+        .customer-info { margin-bottom: 20px; }
+        .quotation-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .quotation-table th, .quotation-table td { border: 1px solid #000; padding: 8px; text-align: left; }
+        .quotation-table th { background-color: #f0f0f0; font-weight: bold; }
+        .total-row { font-weight: bold; background-color: #f9f9f9; }
+        .number { text-align: right; }
+        .footer { margin-top: 30px; }
+        .signature-section { margin-top: 40px; text-align: right; }
+        .signature-section p { margin: 5px 0; }
+        .no-logo, .no-signature { color: #999; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company-logo">{{company_logo}}</div>
+        <h1>QUOTATION</h1>
+        <p><strong>Reference:</strong> {{rfq_reference}}</p>
+        <p><strong>Date:</strong> {{date}}</p>
+    </div>
+
+    <div class="customer-info">
+        <h3>Customer Information:</h3>
+        <p><strong>Company:</strong> {{customer_company}}</p>
+        <p><strong>Contact:</strong> {{customer_contact}}</p>
+        <p><strong>Email:</strong> {{customer_email}}</p>
+        <p><strong>Address:</strong> {{customer_address}}</p>
+    </div>
+
+    <table class="quotation-table">
+        <thead>
+            <tr>
+                <th>Item No.</th>
+                <th>Description</th>
+                <th>Model/Part No.</th>
+                <th>Manufacturer</th>
+                <th>UOM</th>
+                <th>Qty</th>
+                <th>Unit Price (VND)</th>
+                <th>Extended Price (VND)</th>
+                <th>Delivery Time</th>
+                <th>Compliance</th>
+            </tr>
+        </thead>
+        <tbody id="quotation-items">
+            {{table_rows}}
+        </tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="7"><strong>Total:</strong></td>
+                <td class="number"><strong>{{total_amount}}</strong></td>
+                <td colspan="2"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="footer">
+        <p><strong>Currency:</strong> {{currency}}</p>
+        <p><strong>Generated:</strong> {{generated_date}}</p>
+    </div>
+    
+    <div class="signature-section">
+        <p><strong>Authorized by:</strong></p>
+        <div style="margin: 20px 0;">{{company_signature}}</div>
+        <p>_____________________________</p>
+        <p><strong>Signature & Date</strong></p>
+    </div>
+</body>
+</html>

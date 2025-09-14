@@ -1,0 +1,102 @@
+{
+  "action_type": "update",
+  "session_id": "quotation_1755079009716_cdludakpi",
+  "quotation_data": {
+    "rfq_reference": "RFQ-2025-MOTOR-SYSTEMS",
+    "customer_info": {
+      "company_name": "Industrial Motors Inc",
+      "contact_person": "Mr. David Chen",
+      "email": "david.chen@industrialmotors.com",
+      "phone": "+84-28-9876-5432",
+      "address": "456 Engineering Blvd, District 7, Ho Chi Minh City, Vietnam"
+    },
+    "quotation_items": [
+      {
+        "item_no": "1",
+        "company_requirement": {
+          "description": "High Efficiency Motor 10HP 3-Phase",
+          "model_part_number": "HEM-10HP-3P-IE3",
+          "maker_origin": "ABB",
+          "uom": "Ea",
+          "qty": 2,
+          "specifications": "10HP, 3-Phase, 400V, 50Hz, IE3 efficiency class, IP55"
+        },
+        "bidder_proposal": {
+          "description": "High Efficiency Motor 10HP 3-Phase - ABB IE3",
+          "unit_price_vnd": 15500000,
+          "ext_price_vnd": 31000000,
+          "delivery_time": "6-8 weeks",
+          "compliance_deviation": "Fully compliant with IE3 standards"
+        },
+        "currency_code": "VND"
+      },
+      {
+        "item_no": "2", 
+        "company_requirement": {
+          "description": "Variable Frequency Drive 10HP",
+          "model_part_number": "VFD-10HP-400V",
+          "maker_origin": "Schneider Electric",
+          "uom": "Set",
+          "qty": 1,
+          "specifications": "10HP, 400V input/output, Built-in EMC filter, IP20"
+        },
+        "bidder_proposal": {
+          "description": "Variable Frequency Drive - Schneider ATV320",
+          "unit_price_vnd": 8700000,
+          "ext_price_vnd": 8700000,
+          "delivery_time": "4-5 weeks", 
+          "compliance_deviation": "Standard configuration"
+        },
+        "currency_code": "VND"
+      },
+      {
+        "item_no": "3",
+        "company_requirement": {
+          "description": "Motor Protection Relay",
+          "model_part_number": "MPR-10HP-DIGITAL",
+          "maker_origin": "Siemens",
+          "uom": "Ea",
+          "qty": 2,
+          "specifications": "Digital motor protection, Phase loss, Overcurrent, Temperature monitoring"
+        },
+        "bidder_proposal": {
+          "description": "Digital Motor Protection Relay - Siemens 3RB30",
+          "unit_price_vnd": 2300000,
+          "ext_price_vnd": 4600000,
+          "delivery_time": "3-4 weeks",
+          "compliance_deviation": "Enhanced features included"
+        },
+        "currency_code": "VND"
+      }
+    ]
+  },
+  "pricing_variables": {
+    "1": {
+      "shipping_cost": 120000,
+      "tax_rate": 1.1,
+      "exchange_rate": 1.0,
+      "profit_rate": 1.35,
+      "discount_rate": 0.05
+    },
+    "2": {
+      "shipping_cost": 85000,
+      "tax_rate": 1.1,
+      "exchange_rate": 1.0,
+      "profit_rate": 1.25,
+      "discount_rate": 0
+    },
+    "3": {
+      "shipping_cost": 45000,
+      "tax_rate": 1.1,
+      "exchange_rate": 1.0,
+      "profit_rate": 1.3,
+      "discount_rate": 0.02
+    }
+  },
+  "generation_options": {
+    "formats": ["pdf", "excel"],
+    "include_preview": true,
+    "currency": "VND",
+    "language": "EN"
+  }
+}

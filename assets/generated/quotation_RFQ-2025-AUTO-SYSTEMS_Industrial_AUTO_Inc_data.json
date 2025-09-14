@@ -1,0 +1,229 @@
+{
+  "base_filename": "quotation_RFQ-2025-AUTO-SYSTEMS_Industrial_AUTO_Inc",
+  "saved_at": "2025-09-13T15:08:27.690Z",
+  "session_info": {
+    "id": "memory_1757776103515",
+    "action": "update",
+    "status": "processing"
+  },
+  "quotation_data": {
+    "quotation_items": [
+      {
+        "item_no": "1",
+        "currency_code": "USD",
+        "company_requirement": {
+          "description": "High Efficiency AUTO 10HP",
+          "model_part_number": "HEM-10HP-PRO",
+          "maker_origin": "ABB",
+          "qty": 3,
+          "uom": "EA",
+          "specifications": "10HP, 3-phase, 380V, IE3 efficiency"
+        },
+        "compliance_deviation": "Fully compliant",
+        "bidder_proposal": {
+          "original_unit_price": 350,
+          "unit_price": 350,
+          "delivery_time": "4 weeks",
+          "currency_code": "USD",
+          "unit_price_vnd": 350,
+          "original_unit_price_vnd": 350,
+          "calculated_unit_price_vnd": 15717240,
+          "calculated_ext_price_vnd": 47151000,
+          "calculated_unit_price": 15717240,
+          "calculated_ext_price": 47151000,
+          "calculation_metadata": {
+            "actual_unit_price": 10692000,
+            "profit_unit_price": 16038000,
+            "sales_unit_price": 15717240,
+            "discount_amount": 320760,
+            "calculation_timestamp": "2025-09-13T15:07:54.531Z"
+          }
+        },
+        "calculated_results": {
+          "potential_profit": 16038000,
+          "actual_unit_price": 10692000,
+          "profit_unit_price": 16038000,
+          "sales_unit_price": 15717240,
+          "ext_price": 47151000,
+          "calculation_timestamp": "2025-09-13T15:08:23.601Z"
+        }
+      },
+      {
+        "item_no": "2",
+        "currency_code": "USD",
+        "company_requirement": {
+          "description": "Variable Frequency CLI",
+          "model_part_number": "VFD-10HP-001",
+          "maker_origin": "ABB",
+          "qty": 3,
+          "uom": "EA",
+          "specifications": "10HP capacity, 380V input"
+        },
+        "compliance_deviation": "Standard product",
+        "bidder_proposal": {
+          "original_unit_price": 200,
+          "unit_price": 200,
+          "delivery_time": "4 weeks",
+          "currency_code": "USD",
+          "unit_price_vnd": 200,
+          "original_unit_price_vnd": 200,
+          "calculated_unit_price_vnd": 9168390,
+          "calculated_ext_price_vnd": 27504000,
+          "calculated_unit_price": 9168390,
+          "calculated_ext_price": 27504000,
+          "calculation_metadata": {
+            "actual_unit_price": 6237000,
+            "profit_unit_price": 9355500,
+            "sales_unit_price": 9168390,
+            "discount_amount": 187110,
+            "calculation_timestamp": "2025-09-13T15:07:54.531Z"
+          }
+        },
+        "calculated_results": {
+          "potential_profit": 9578250,
+          "actual_unit_price": 6385500,
+          "profit_unit_price": 9578250,
+          "sales_unit_price": 9386685,
+          "ext_price": 28161000,
+          "calculation_timestamp": "2025-09-13T15:08:23.602Z"
+        }
+      }
+    ],
+    "rfq_reference": "RFQ-2025-AUTO-SYSTEMS",
+    "customer_info": {
+      "company_name": "Industrial AUTO Inc",
+      "contact_person": "Sarah Johnson",
+      "email": "sarah.johnson@industrialauto.com",
+      "address": "456 Industrial Ave, Ho Chi Minh City, Vietnam"
+    }
+  },
+  "calculated_pricing": {
+    "calculation_success": true,
+    "total_items": 2,
+    "processed_items": [
+      {
+        "item_no": "1",
+        "description": "High Efficiency AUTO 10HP",
+        "original_unit_price": 350,
+        "quantity": 3,
+        "unit_of_measure": "EA",
+        "actual_unit_price": 10692000,
+        "profit_unit_price": 16038000,
+        "sales_unit_price": 15717240,
+        "ext_price": 47151000,
+        "potential_profit": 16038000,
+        "shipping_cost_applied": 10,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 27000,
+        "profit_rate_applied": 1.5,
+        "discount_rate_applied": 0.02,
+        "discount_amount": 320760,
+        "calculation_steps": {
+          "step_1_with_shipping": 360,
+          "step_2_with_tax": 396.00000000000006,
+          "step_3_actual_unit_price": 10692000,
+          "step_4_profit_unit_price": 16038000,
+          "step_5_discount_amount": 320760,
+          "step_6_sales_unit_price": 15717240
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-09-13T15:08:23.601Z"
+      },
+      {
+        "item_no": "2",
+        "description": "Variable Frequency CLI",
+        "original_unit_price": 200,
+        "quantity": 3,
+        "unit_of_measure": "EA",
+        "actual_unit_price": 6385500,
+        "profit_unit_price": 9578250,
+        "sales_unit_price": 9386685,
+        "ext_price": 28161000,
+        "potential_profit": 9578250,
+        "shipping_cost_applied": 15,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 27000,
+        "profit_rate_applied": 1.5,
+        "discount_rate_applied": 0.02,
+        "discount_amount": 191565,
+        "calculation_steps": {
+          "step_1_with_shipping": 215,
+          "step_2_with_tax": 236.50000000000003,
+          "step_3_actual_unit_price": 6385500,
+          "step_4_profit_unit_price": 9578250,
+          "step_5_discount_amount": 191565,
+          "step_6_sales_unit_price": 9386685
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-09-13T15:08:23.602Z"
+      }
+    ],
+    "pricing_summary": {
+      "subtotal": 75312000,
+      "currency": "VND",
+      "formatted_subtotal": "75.312.000 ₫"
+    },
+    "calculation_metadata": {
+      "formula_used": "sales_unit_price = ((unit_price + shipping_cost) × tax_rate × exchange_rate × profit_rate) - discount",
+      "variables_applied": {
+        "1": {
+          "shipping_cost": 10,
+          "tax_rate": 1.1,
+          "exchange_rate": 27000,
+          "profit_rate": 1.5,
+          "discount_rate": 0.02
+        },
+        "2": {
+          "shipping_cost": 15,
+          "tax_rate": 1.1,
+          "exchange_rate": 27000,
+          "profit_rate": 1.5,
+          "discount_rate": 0.02
+        }
+      },
+      "timestamp": "2025-09-13T15:08:23.601Z"
+    },
+    "errors": []
+  },
+  "metadata": {
+    "rfq_reference": "RFQ-2025-AUTO-SYSTEMS",
+    "customer_name": "Industrial AUTO Inc",
+    "items_count": 2,
+    "has_pricing": true
+  },
+  "pricing_variables": {
+    "format_version": "2.0",
+    "storage_timestamp": "2025-09-13T15:08:27.690Z",
+    "per_item": {
+      "1": {
+        "shipping_cost": 10,
+        "tax_rate": 1.1,
+        "exchange_rate": 27000,
+        "profit_rate": 1.5,
+        "discount_rate": 0.02
+      },
+      "2": {
+        "shipping_cost": 15,
+        "tax_rate": 1.1,
+        "exchange_rate": 27000,
+        "profit_rate": 1.5,
+        "discount_rate": 0.02
+      }
+    },
+    "global_fallback": {
+      "shipping_cost": 10,
+      "tax_rate": 1.1,
+      "exchange_rate": 27000,
+      "profit_rate": 1.5,
+      "discount_rate": 0.02
+    },
+    "original_format": "per-item"
+  },
+  "update_history": [
+    {
+      "timestamp": "2025-09-13T15:08:27.690Z",
+      "action": "pricing_variables_updated",
+      "source": "apply_button"
+    }
+  ]
+}

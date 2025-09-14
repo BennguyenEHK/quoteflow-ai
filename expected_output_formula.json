@@ -1,0 +1,308 @@
+{
+  "success": true,
+  "action_type": "update",
+  "status": "update_complete",
+  "session_id": "quotation_1755079009716_cdludakpi",
+  "processing_time_ms": 1247,
+  "workflow_info": {
+    "action_performed": "update",
+    "current_status": "update_complete",
+    "items_processed": 3,
+    "auto_calculation_triggered": true
+  },
+  "quotation_data": {
+    "rfq_reference": "RFQ-2025-MOTOR-SYSTEMS",
+    "customer_info": {
+      "company_name": "Industrial Motors Inc",
+      "contact_person": "Mr. David Chen",
+      "email": "david.chen@industrialmotors.com",
+      "phone": "+84-28-9876-5432",
+      "address": "456 Engineering Blvd, District 7, Ho Chi Minh City, Vietnam"
+    },
+    "quotation_items": [
+      {
+        "item_no": "1",
+        "company_requirement": {
+          "description": "High Efficiency Motor 10HP 3-Phase",
+          "model_part_number": "HEM-10HP-3P-IE3",
+          "maker_origin": "ABB",
+          "uom": "Ea",
+          "qty": 2,
+          "specifications": "10HP, 3-Phase, 400V, 50Hz, IE3 efficiency class, IP55"
+        },
+        "bidder_proposal": {
+          "description": "High Efficiency Motor 10HP 3-Phase - ABB IE3",
+          "unit_price_vnd": 15500000,
+          "ext_price_vnd": 31000000,
+          "delivery_time": "6-8 weeks",
+          "compliance_deviation": "Fully compliant with IE3 standards",
+          "currency_code": "VND"
+        },
+        "currency_code": "VND"
+      },
+      {
+        "item_no": "2",
+        "company_requirement": {
+          "description": "Variable Frequency Drive 10HP",
+          "model_part_number": "VFD-10HP-400V",
+          "maker_origin": "Schneider Electric",
+          "uom": "Set",
+          "qty": 1,
+          "specifications": "10HP, 400V input/output, Built-in EMC filter, IP20"
+        },
+        "bidder_proposal": {
+          "description": "Variable Frequency Drive - Schneider ATV320",
+          "unit_price_vnd": 8700000,
+          "ext_price_vnd": 8700000,
+          "delivery_time": "4-5 weeks",
+          "compliance_deviation": "Standard configuration",
+          "currency_code": "VND"
+        },
+        "currency_code": "VND"
+      },
+      {
+        "item_no": "3",
+        "company_requirement": {
+          "description": "Motor Protection Relay",
+          "model_part_number": "MPR-10HP-DIGITAL",
+          "maker_origin": "Siemens",
+          "uom": "Ea",
+          "qty": 2,
+          "specifications": "Digital motor protection, Phase loss, Overcurrent, Temperature monitoring"
+        },
+        "bidder_proposal": {
+          "description": "Digital Motor Protection Relay - Siemens 3RB30",
+          "unit_price_vnd": 2300000,
+          "ext_price_vnd": 4600000,
+          "delivery_time": "3-4 weeks",
+          "compliance_deviation": "Enhanced features included",
+          "currency_code": "VND"
+        },
+        "currency_code": "VND"
+      }
+    ]
+  },
+  "calculated_pricing": {
+    "calculation_success": true,
+    "total_items": 3,
+    "processed_items": [
+      {
+        "item_no": "1",
+        "description": "High Efficiency Motor 10HP 3-Phase",
+        "original_unit_price": 15500000,
+        "quantity": 2,
+        "unit_of_measure": "Ea",
+        "actual_unit_price": 17182000,
+        "profit_unit_price": 23195700,
+        "sales_unit_price": 22035915,
+        "ext_price": 44071830,
+        "shipping_cost_applied": 120000,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 1.0,
+        "profit_rate_applied": 1.35,
+        "discount_rate_applied": 0.05,
+        "discount_amount": 1159785,
+        "calculation_steps": {
+          "step_1_with_shipping": 15620000,
+          "step_2_with_tax": 17182000,
+          "step_3_actual_unit_price": 17182000,
+          "step_4_profit_unit_price": 23195700,
+          "step_5_discount_amount": 1159785,
+          "step_6_sales_unit_price": 22035915
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-08-22T18:38:11.665Z"
+      },
+      {
+        "item_no": "2",
+        "description": "Variable Frequency Drive 10HP",
+        "original_unit_price": 8700000,
+        "quantity": 1,
+        "unit_of_measure": "Set",
+        "actual_unit_price": 9663500,
+        "profit_unit_price": 12079375,
+        "sales_unit_price": 12079375,
+        "ext_price": 12079375,
+        "shipping_cost_applied": 85000,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 1.0,
+        "profit_rate_applied": 1.25,
+        "discount_rate_applied": 0,
+        "discount_amount": 0,
+        "calculation_steps": {
+          "step_1_with_shipping": 8785000,
+          "step_2_with_tax": 9663500,
+          "step_3_actual_unit_price": 9663500,
+          "step_4_profit_unit_price": 12079375,
+          "step_5_discount_amount": 0,
+          "step_6_sales_unit_price": 12079375
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-08-22T18:38:11.665Z"
+      },
+      {
+        "item_no": "3",
+        "description": "Motor Protection Relay",
+        "original_unit_price": 2300000,
+        "quantity": 2,
+        "unit_of_measure": "Ea",
+        "actual_unit_price": 2579500,
+        "profit_unit_price": 3353350,
+        "sales_unit_price": 3286283,
+        "ext_price": 6572566,
+        "shipping_cost_applied": 45000,
+        "tax_rate_applied": 1.1,
+        "exchange_rate_applied": 1.0,
+        "profit_rate_applied": 1.3,
+        "discount_rate_applied": 0.02,
+        "discount_amount": 67067,
+        "calculation_steps": {
+          "step_1_with_shipping": 2345000,
+          "step_2_with_tax": 2579500,
+          "step_3_actual_unit_price": 2579500,
+          "step_4_profit_unit_price": 3353350,
+          "step_5_discount_amount": 67067,
+          "step_6_sales_unit_price": 3286283
+        },
+        "currency": "VND",
+        "calculation_timestamp": "2025-08-22T18:38:11.665Z"
+      }
+    ],
+    "pricing_summary": {
+      "subtotal": 62723771,
+      "currency": "VND",
+      "formatted_subtotal": "62.723.771 ₫",
+      "total_discount_amount": 1226852,
+      "total_shipping_cost": 250000,
+      "total_tax_amount": 5725950,
+      "calculation_breakdown": {
+        "original_total": 44300000,
+        "shipping_added": 44550000,
+        "after_tax": 49005000,
+        "after_profit": 63950523,
+        "final_after_discount": 62723771
+      }
+    },
+    "calculation_metadata": {
+      "formula_used": "sales_unit_price = ((unit_price + shipping_cost) × tax_rate × exchange_rate × profit_rate) - discount_amount",
+      "variables_applied": {
+        "1": {
+          "shipping_cost": 120000,
+          "tax_rate": 1.1,
+          "exchange_rate": 1.0,
+          "profit_rate": 1.35,
+          "discount_rate": 0.05
+        },
+        "2": {
+          "shipping_cost": 85000,
+          "tax_rate": 1.1,
+          "exchange_rate": 1.0,
+          "profit_rate": 1.25,
+          "discount_rate": 0
+        },
+        "3": {
+          "shipping_cost": 45000,
+          "tax_rate": 1.1,
+          "exchange_rate": 1.0,
+          "profit_rate": 1.3,
+          "discount_rate": 0.02
+        }
+      },
+      "timestamp": "2025-08-22T18:38:11.665Z",
+      "calculation_engine": "QuotationPriceCalculations v2.0"
+    },
+    "errors": []
+  },
+  "preview_data": {
+    "session_id": "quotation_1755079009716_cdludakpi",
+    "rfq_reference": "RFQ-2025-MOTOR-SYSTEMS",
+    "customer_info": {
+      "company_name": "Industrial Motors Inc",
+      "contact_person": "Mr. David Chen",
+      "email": "david.chen@industrialmotors.com",
+      "phone": "+84-28-9876-5432",
+      "address": "456 Engineering Blvd, District 7, Ho Chi Minh City, Vietnam"
+    },
+    "items": [
+      {
+        "item_no": "1",
+        "description": "High Efficiency Motor 10HP 3-Phase",
+        "quantity": 2,
+        "uom": "Ea",
+        "original_unit_price": 15500000,
+        "calculated_unit_price": 22035915,
+        "calculated_ext_price": 44071830,
+        "delivery_time": "6-8 weeks",
+        "specifications": "10HP, 3-Phase, 400V, 50Hz, IE3 efficiency class, IP55",
+        "compliance": "Fully compliant with IE3 standards"
+      },
+      {
+        "item_no": "2",
+        "description": "Variable Frequency Drive 10HP",
+        "quantity": 1,
+        "uom": "Set",
+        "original_unit_price": 8700000,
+        "calculated_unit_price": 12079375,
+        "calculated_ext_price": 12079375,
+        "delivery_time": "4-5 weeks",
+        "specifications": "10HP, 400V input/output, Built-in EMC filter, IP20",
+        "compliance": "Standard configuration"
+      },
+      {
+        "item_no": "3",
+        "description": "Motor Protection Relay",
+        "quantity": 2,
+        "uom": "Ea",
+        "original_unit_price": 2300000,
+        "calculated_unit_price": 3286283,
+        "calculated_ext_price": 6572566,
+        "delivery_time": "3-4 weeks",
+        "specifications": "Digital motor protection, Phase loss, Overcurrent, Temperature monitoring",
+        "compliance": "Enhanced features included"
+      }
+    ],
+    "pricing_summary": {
+      "subtotal": 62723771,
+      "currency": "VND",
+      "formatted_total": "62.723.771 ₫"
+    },
+    "calculation_metadata": {
+      "per_item_variables_applied": true,
+      "total_discount_applied": 1226852,
+      "calculation_timestamp": "2025-08-22T18:38:11.665Z"
+    },
+    "generation_info": {
+      "generated_at": "2025-08-22T18:38:11.665Z",
+      "action_type": "update",
+      "auto_calculated": true
+    }
+  },
+  "generated_files": {
+    "html": {
+      "filename": "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.html",
+      "path": "C:\\Users\\LENOVO\\OneDrive\\Máy tính\\make_sales_agent\\make_sales_sse_sever\\assets\\generated\\quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.html",
+      "url": "http://localhost:3000/assets/generated/quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.html",
+      "status": "generated",
+      "content": "<!DOCTYPE html>..."
+    },
+    "pdf": {
+      "filename": "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.pdf",
+      "path": "/assets/generated/quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.pdf",
+      "url": "http://localhost:3000/assets/generated/quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.pdf",
+      "status": "pending_pdf_conversion"
+    },
+    "excel": {
+      "filename": "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.xlsx",
+      "path": "/assets/generated/quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.xlsx",
+      "url": "http://localhost:3000/assets/generated/quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-08-22T18-38-11-681Z.xlsx",
+      "status": "pending_excel_conversion"
+    },
+    "table_rows_count": 3
+  },
+  "session_data": {
+    "id": "quotation_1755079009716_cdludakpi",
+    "updated_at": "2025-08-22T18:38:11.681Z",
+    "completed_at": "2025-08-22T18:38:11.681Z"
+  },
+  "timestamp": "2025-08-22T18:38:11.681Z"
+}

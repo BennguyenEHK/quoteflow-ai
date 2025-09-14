@@ -1,0 +1,18 @@
+{
+  "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc": {
+    "filename": "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc_2025-09-13T15-05-16-054Z.html",
+    "base_filename": "quotation_RFQ-2025-MOTOR-SYSTEMS_Industrial_Motors_Inc",
+    "rfq_reference": "RFQ-2025-MOTOR-SYSTEMS",
+    "customer_name": "Industrial Motors Inc",
+    "generated_at": "2025-09-13T15:05:16.089Z",
+    "last_updated": "2025-09-13T15:05:16.089Z"
+  },
+  "quotation_RFQ-2025-AUTO-SYSTEMS_Industrial_AUTO_Inc": {
+    "filename": "quotation_RFQ-2025-AUTO-SYSTEMS_Industrial_AUTO_Inc_2025-09-13T15-08-23-619Z.html",
+    "base_filename": "quotation_RFQ-2025-AUTO-SYSTEMS_Industrial_AUTO_Inc",
+    "rfq_reference": "RFQ-2025-AUTO-SYSTEMS",
+    "customer_name": "Industrial AUTO Inc",
+    "generated_at": "2025-09-13T15:08:23.668Z",
+    "last_updated": "2025-09-13T15:08:23.668Z"
+  }
+}
